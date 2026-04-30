@@ -245,7 +245,7 @@ const Contact = () => {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Industry</label>
                 <CustomSelect 
-                  options={['Software & IT', 'SaaS', 'Consulting', 'Accounting', 'Healthcare', 'Logistics']} 
+                  options={['Software & IT', 'SaaS', 'Consulting', 'Accounting', 'Healthcare', 'Logistics', 'Other']} 
                   placeholder="Select Industry"
                   onChange={(val) => setFormData(prev => ({ ...prev, industry: val }))}
                 />
