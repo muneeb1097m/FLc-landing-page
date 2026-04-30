@@ -72,13 +72,12 @@ const Hero = () => {
                 color: 'var(--primary)', 
                 padding: '0.6rem 1.2rem', 
                 borderRadius: '50px', 
-                fontSize: '0.75rem', 
+                fontSize: '0.8rem', 
                 fontWeight: 800, 
-                textTransform: 'uppercase', 
-                letterSpacing: '2px',
+                letterSpacing: '1px',
                 border: '1px solid rgba(225, 29, 72, 0.1)'
               }}>
-                B2B Growth & Lead Generation
+                B2B Lead Generation Agency
               </span>
             </motion.div>
 
