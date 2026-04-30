@@ -42,12 +42,12 @@ const Footer = () => {
           <div>
             <h4 style={{ fontSize: '1rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '2rem' }}>Connect</h4>
             <a 
-              href="https://wa.me/923334944679" 
+              href="https://wa.me/923244898766" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ fontSize: '1.5rem', fontWeight: 900, color: 'var(--primary)', marginBottom: '0.5rem', textDecoration: 'none', display: 'block' }}
             >
-              0333-4944679
+              +92 324 4898766
             </a>
             <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem' }}>faseehlall.com</p>
           </div>

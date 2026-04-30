@@ -127,12 +127,12 @@ const Contact = () => {
                 <div>
                   <div style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.5 }}>WhatsApp Us</div>
                   <a 
-                    href="https://wa.me/923334944679" 
+                    href="https://wa.me/923244898766" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--foreground)', textDecoration: 'none' }}
                   >
-                    0333-4944679
+                    +92 324 4898766
                   </a>
                 </div>
               </div>
