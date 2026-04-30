@@ -151,8 +151,8 @@ const Hero = () => {
             display: 'flex',
             flexDirection: 'column',
             gap: '1.5rem',
-            width: '100vw',
-            marginLeft: 'calc(-50vw + 50%)',
+            width: 'calc(100% + 10vw)',
+            marginLeft: '-5vw',
             position: 'relative',
             zIndex: 5
           }}

@@ -9,6 +9,7 @@ const CustomCursor = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
   const [cursorType, setCursorType] = useState('default');
+  const [isVisible, setIsVisible] = useState(false);
   
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
@@ -18,6 +19,14 @@ const CustomCursor = () => {
   const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
+    // Disable custom cursor on touch devices
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || window.innerWidth < 768;
+    if (isTouchDevice) {
+      setIsVisible(false);
+      return;
+    }
+    
+    setIsVisible(true);
     const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
@@ -58,7 +67,9 @@ const CustomCursor = () => {
         el.removeEventListener('mouseleave', handleHoverEnd);
       });
     };
-  }, [cursorX, cursorY]);
+  }, [cursorX, cursorY, isVisible]);
+
+  if (!isVisible) return null;
 
   return (
     <motion.div
