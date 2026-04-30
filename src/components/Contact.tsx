@@ -15,7 +15,7 @@ const inputStyle = {
   width: '100%'
 };
 
-const CustomSelect = ({ options, placeholder }: { options: string[], placeholder: string }) => {
+const CustomSelect = ({ options, placeholder, onChange }: { options: string[], placeholder: string, onChange: (val: string) => void }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [selected, setSelected] = React.useState('');
 
@@ -68,6 +68,7 @@ const CustomSelect = ({ options, placeholder }: { options: string[], placeholder
                 key={opt}
                 onClick={() => {
                   setSelected(opt);
+                  onChange(opt);
                   setIsOpen(false);
                 }}
                 style={{
@@ -104,6 +105,69 @@ const CustomSelect = ({ options, placeholder }: { options: string[], placeholder
 };
 
 const Contact = () => {
+  const [formData, setFormData] = React.useState({
+    fullName: '',
+    businessName: '',
+    industry: '',
+    whatsapp: '',
+    challenge: ''
+  });
+  const [status, setStatus] = React.useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const response = await fetch('https://services.leadconnectorhq.com/hooks/Wk54OwLm0yWPHmcKoUJJ/webhook-trigger/2c6862b7-0004-4876-98d1-d89404db00bd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus('error');
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  if (status === 'success') {
+    return (
+      <section className="section-padding" style={{ background: 'white', minHeight: '600px', display: 'flex', alignItems: 'center' }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <motion.div 
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            style={{ background: 'var(--bg-soft)', padding: '4rem', borderRadius: '40px', maxWidth: '600px', margin: '0 auto', border: '1px solid var(--border)' }}
+          >
+            <div style={{ width: '80px', height: '80px', background: 'var(--primary)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 2rem', color: 'white' }}>
+              <Send size={40} />
+            </div>
+            <h2 style={{ marginBottom: '1rem' }}>Request Received!</h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.6 }}>
+              Thank you for reaching out. We are reviewing your details and will get back to you within 24 hours to schedule your strategy call.
+            </p>
+            <button onClick={() => setStatus('idle')} className="btn-premium secondary" style={{ marginTop: '2rem' }}>
+              Send Another Message
+            </button>
+          </motion.div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="contact" className="section-padding" style={{ background: 'white', position: 'relative', overflow: 'hidden' }}>
       {/* Decorative Blur */}
@@ -150,15 +214,31 @@ const Contact = () => {
 
           {/* Form */}
           <div style={{ background: 'var(--bg-soft)', padding: '3.5rem', borderRadius: '40px', border: '1px solid var(--border)', boxShadow: 'var(--shadow-premium)' }}>
-            <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div className="grid-2" style={{ gap: '1.5rem' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Full Name</label>
-                  <input type="text" placeholder="John Doe" style={inputStyle} />
+                  <input 
+                    name="fullName"
+                    type="text" 
+                    placeholder="John Doe" 
+                    style={inputStyle} 
+                    required 
+                    value={formData.fullName}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Business Name</label>
-                  <input type="text" placeholder="Agency Name" style={inputStyle} />
+                  <input 
+                    name="businessName"
+                    type="text" 
+                    placeholder="Agency Name" 
+                    style={inputStyle} 
+                    required
+                    value={formData.businessName}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
               
@@ -167,21 +247,58 @@ const Contact = () => {
                 <CustomSelect 
                   options={['Software & IT', 'SaaS', 'Consulting', 'Accounting', 'Healthcare', 'Logistics']} 
                   placeholder="Select Industry"
+                  onChange={(val) => setFormData(prev => ({ ...prev, industry: val }))}
                 />
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>WhatsApp Number</label>
-                <input type="text" placeholder="03XX-XXXXXXX" style={inputStyle} />
+                <input 
+                  name="whatsapp"
+                  type="text" 
+                  placeholder="03XX-XXXXXXX" 
+                  style={inputStyle} 
+                  required
+                  value={formData.whatsapp}
+                  onChange={handleChange}
+                />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Biggest Challenge</label>
-                <textarea placeholder="Tell us what's holding you back..." style={{ ...inputStyle, height: '120px', resize: 'none', padding: '1.5rem' }}></textarea>
+                <textarea 
+                  name="challenge"
+                  placeholder="Tell us what's holding you back..." 
+                  style={{ ...inputStyle, height: '120px', resize: 'none', padding: '1.5rem' }}
+                  required
+                  value={formData.challenge}
+                  onChange={handleChange}
+                ></textarea>
               </div>
-              <button data-cursor="call" className="btn-premium primary" style={{ width: '100%', justifyContent: 'center', height: '64px', marginTop: '1rem', fontSize: '1.1rem' }}>
-                <Send size={20} />
-                Book My Strategy Call
+              <button 
+                type="submit"
+                disabled={status === 'loading'}
+                data-cursor="call" 
+                className="btn-premium primary" 
+                style={{ 
+                  width: '100%', 
+                  justifyContent: 'center', 
+                  height: '64px', 
+                  marginTop: '1rem', 
+                  fontSize: '1.1rem',
+                  opacity: status === 'loading' ? 0.7 : 1,
+                  cursor: status === 'loading' ? 'not-allowed' : 'pointer'
+                }}
+              >
+                <Send size={20} className={status === 'loading' ? 'animate-pulse' : ''} />
+                {status === 'loading' ? 'Sending Request...' : 'Book My Strategy Call'}
               </button>
+              
+              {status === 'error' && (
+                <p style={{ textAlign: 'center', fontSize: '0.85rem', color: 'var(--primary)', marginTop: '0.5rem', fontWeight: 700 }}>
+                  Something went wrong. Please try again or WhatsApp us directly.
+                </p>
+              )}
+              
               <p style={{ textAlign: 'center', fontSize: '0.85rem', opacity: 0.6, marginTop: '1rem', fontWeight: 600 }}>
                 No commitment. No pressure. Just results.
               </p>
