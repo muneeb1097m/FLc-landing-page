@@ -80,7 +80,7 @@ const Navbar = () => {
             
             <a href="#contact" data-cursor="call" className="btn-premium primary" style={{ padding: '0.75rem 1.5rem', fontSize: '0.85rem' }}>
               <Phone size={16} />
-              <span>Free Strategy Call</span>
+              <span>Talk to Expert</span>
             </a>
           </div>
 
@@ -139,7 +139,7 @@ const Navbar = () => {
           </Link>
         ))}
         <a href="#contact" className="btn-premium primary w-full" style={{ justifyContent: 'center' }}>
-          Book a Free Strategy Call
+          Talk to Expert
         </a>
       </div>
 

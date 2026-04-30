@@ -19,7 +19,7 @@ const Packages = () => {
         'Weekly Handholding Support',
         'No fixed SQL commitment'
       ],
-      cta: 'Get Started',
+      cta: 'Talk to Expert',
       popular: false
     },
     {
@@ -36,7 +36,7 @@ const Packages = () => {
         '30–35 SQLs Committed (90 Days)',
         'You just show up to meetings'
       ],
-      cta: 'Sign Up',
+      cta: 'Talk to Expert',
       popular: true
     },
     {
@@ -54,7 +54,7 @@ const Packages = () => {
         'Save PKR 125,000 total',
         'Omni-channel Domination'
       ],
-      cta: 'Scale to the Max',
+      cta: 'Talk to Expert',
       popular: false
     }
   ];

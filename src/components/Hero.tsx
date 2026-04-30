@@ -123,7 +123,7 @@ const Hero = () => {
                 style={{ height: '64px', padding: '0 2.5rem', fontSize: '1.1rem', cursor: 'none' }}
               >
                 <Calendar size={20} />
-                Book a Free Strategy Call
+                Talk to Expert
               </motion.a>
               <motion.a 
                 href="#how-it-works"
