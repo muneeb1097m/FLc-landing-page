@@ -56,7 +56,7 @@ const Hero = () => {
           flexDirection: 'row',
           alignItems: 'center',
           textAlign: 'left',
-          marginBottom: '80px'
+          marginBottom: '120px'
         }}>
           {/* Main Content */}
           <motion.div 
@@ -89,8 +89,8 @@ const Hero = () => {
                 fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', 
                 fontWeight: 900, 
                 color: 'var(--foreground)', 
-                marginBottom: '2rem',
-                lineHeight: 1.05,
+                marginBottom: '2.5rem',
+                lineHeight: 1.1,
                 letterSpacing: '-0.05em'
               }}
             >
@@ -105,8 +105,8 @@ const Hero = () => {
                 fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', 
                 fontWeight: 600, 
                 color: 'var(--text-muted)', 
-                marginBottom: '3rem',
-                lineHeight: 1.5,
+                marginBottom: '4rem',
+                lineHeight: 1.6,
                 maxWidth: '750px'
               }}
             >
@@ -114,7 +114,7 @@ const Hero = () => {
             </motion.p>
 
             {/* CTAs */}
-            <motion.div variants={itemVariants} style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'flex-start' }}>
+            <motion.div variants={itemVariants} style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'flex-start' }}>
               <motion.a 
                 href="#contact"
                 data-cursor="call"
