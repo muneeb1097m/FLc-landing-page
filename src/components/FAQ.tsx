@@ -85,7 +85,7 @@ const FAQ = () => {
         }}>
           <p style={{ fontWeight: 900, fontSize: '1.25rem', color: 'white' }}>Have a specific question about your industry?</p>
           <a 
-            href="https://wa.me/923334944679" 
+            href="https://wa.me/923244898766" 
             target="_blank" 
             rel="noopener noreferrer"
             data-cursor="call" 
