@@ -155,8 +155,8 @@ const RevealQuote = () => {
   };
 
   const quoteContent = (
-    <p style={{ fontSize: 'clamp(1.5rem, 4vw, 2.8rem)', fontWeight: 900, lineHeight: 1.2, margin: 0, width: '100%', maxWidth: '1000px' }}>
-      "Either way, nobody built you a <span style={{ textDecoration: 'underline', textUnderlineOffset: '12px' }}>system</span>. <br />
+    <p style={{ fontSize: 'clamp(1.5rem, 4vw, 2.8rem)', fontWeight: 900, lineHeight: 1.3, margin: 0, width: '100%', maxWidth: '1000px' }}>
+      "Either way, nobody built you a <span style={{ borderBottom: '3px solid white', paddingBottom: '4px' }}>system</span>. <br />
       That is the only thing we fix."
     </p>
   );
@@ -188,8 +188,8 @@ const RevealQuote = () => {
     >
       {/* Base Layer: White Text on Red BG */}
       <div style={{ textAlign: 'center', color: 'white', padding: '40px', width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <p style={{ fontSize: 'clamp(1.5rem, 4vw, 2.8rem)', fontWeight: 900, lineHeight: 1.2, margin: 0, width: '100%', maxWidth: '1000px', color: 'white' }}>
-          "Either way, nobody built you a <span style={{ textDecoration: 'underline', textUnderlineOffset: '12px' }}>system</span>. <br />
+        <p style={{ fontSize: 'clamp(1.5rem, 4vw, 2.8rem)', fontWeight: 900, lineHeight: 1.3, margin: 0, width: '100%', maxWidth: '1000px', color: 'white' }}>
+          "Either way, nobody built you a <span style={{ borderBottom: '3px solid white', paddingBottom: '4px' }}>system</span>. <br />
           That is the only thing we fix."
         </p>
       </div>
@@ -217,8 +217,8 @@ const RevealQuote = () => {
           zIndex: 10
         }}
       >
-        <p style={{ fontSize: 'clamp(1.5rem, 4vw, 2.8rem)', fontWeight: 900, lineHeight: 1.2, margin: 0, width: '100%', maxWidth: '1000px', color: 'var(--primary)' }}>
-          "Either way, nobody built you a <span style={{ textDecoration: 'underline', textUnderlineOffset: '12px' }}>system</span>. <br />
+        <p style={{ fontSize: 'clamp(1.5rem, 4vw, 2.8rem)', fontWeight: 900, lineHeight: 1.3, margin: 0, width: '100%', maxWidth: '1000px', color: 'var(--primary)' }}>
+          "Either way, nobody built you a <span style={{ borderBottom: '3px solid var(--primary)', paddingBottom: '4px' }}>system</span>. <br />
           That is the only thing we fix."
         </p>
       </motion.div>
