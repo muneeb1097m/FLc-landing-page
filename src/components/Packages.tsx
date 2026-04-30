@@ -36,7 +36,7 @@ const Packages = () => {
         '30–35 SQLs Committed (90 Days)',
         'You just show up to meetings'
       ],
-      cta: 'Hot Selling',
+      cta: 'Sign Up',
       popular: true
     },
     {
