@@ -160,9 +160,23 @@ const Contact = () => {
             <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.6 }}>
               Thank you for reaching out. We are reviewing your details and will get back to you within 24 hours to schedule your strategy call.
             </p>
-            <button onClick={() => setStatus('idle')} className="btn-premium secondary" style={{ marginTop: '2rem' }}>
-              Send Another Message
-            </button>
+            <a 
+              href="https://wa.me/923244898766" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-premium secondary" 
+              style={{ marginTop: '2rem', display: 'inline-flex', textDecoration: 'none', gap: '10px' }}
+            >
+              Send a WhatsApp Message
+            </a>
+            <div 
+              onClick={() => setStatus('idle')} 
+              style={{ marginTop: '1.5rem', fontSize: '0.9rem', color: 'var(--primary)', fontWeight: 700, cursor: 'pointer', opacity: 0.8 }}
+              onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+              onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}
+            >
+              ← Send Another Message
+            </div>
           </motion.div>
         </div>
       </section>
