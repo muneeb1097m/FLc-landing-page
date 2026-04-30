@@ -108,6 +108,7 @@ const Contact = () => {
   const [formData, setFormData] = React.useState({
     fullName: '',
     businessName: '',
+    email: '',
     websiteLink: '',
     whatsapp: '',
     challenge: ''
@@ -240,6 +241,19 @@ const Contact = () => {
                     onChange={handleChange}
                   />
                 </div>
+              </div>
+              
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Email Address</label>
+                <input 
+                  name="email"
+                  type="email" 
+                  placeholder="john@company.com" 
+                  style={inputStyle} 
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                />
               </div>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
