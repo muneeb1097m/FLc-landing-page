@@ -261,7 +261,8 @@ p {
 .problem-card:hover h3,
 .problem-card:hover p,
 .problem-card:hover li,
-.problem-card:hover span {
+.problem-card:hover span,
+.problem-card:hover svg {
   color: white !important;
 }
 
@@ -307,7 +308,8 @@ p {
 .package-card:hover .price,
 .package-card:hover .feature-item,
 .package-card:hover p,
-.package-card:hover span {
+.package-card:hover span,
+.package-card:hover svg {
   color: white !important;
 }
 
@@ -339,7 +341,8 @@ p {
 .phase-card:hover h3,
 .phase-card:hover p,
 .phase-card:hover li,
-.phase-card:hover span {
+.phase-card:hover span,
+.phase-card:hover svg {
   color: white !important;
 }
 
