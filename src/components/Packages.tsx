@@ -42,6 +42,7 @@ const Packages = () => {
     {
       name: 'Advanced',
       price: 'PKR 435,000',
+      originalPrice: 'PKR 560,000',
       period: 'per month',
       description: 'Maximum scale for established agencies looking for market dominance.',
       features: [
@@ -71,7 +72,7 @@ const Packages = () => {
         </div>
 
         <div className="grid-3" style={{ gap: '2rem', alignItems: 'stretch' }}>
-          {plans.map((plan, i) => (
+          {plans.map((plan: any, i) => (
             <motion.div
               key={plan.name}
               initial={{ opacity: 0, y: 30 }}
@@ -104,6 +105,18 @@ const Packages = () => {
               
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{plan.name}</h3>
               <div style={{ marginBottom: '2rem' }}>
+                {plan.originalPrice && (
+                  <span style={{ 
+                    fontSize: '1rem', 
+                    textDecoration: 'line-through', 
+                    opacity: 0.5, 
+                    display: 'block',
+                    marginBottom: '0.2rem',
+                    fontWeight: 700
+                  }}>
+                    {plan.originalPrice}
+                  </span>
+                )}
                 <span style={{ fontSize: '2rem', fontWeight: 900 }}>{plan.price}</span>
                 <span style={{ opacity: 0.6, fontSize: '0.9rem', marginLeft: '8px' }}>{plan.period}</span>
               </div>
