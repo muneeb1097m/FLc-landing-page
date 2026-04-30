@@ -108,7 +108,7 @@ const Contact = () => {
   const [formData, setFormData] = React.useState({
     fullName: '',
     businessName: '',
-    industry: '',
+    websiteLink: '',
     whatsapp: '',
     challenge: ''
   });
@@ -243,11 +243,15 @@ const Contact = () => {
               </div>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Industry</label>
-                <CustomSelect 
-                  options={['Software & IT', 'SaaS', 'Consulting', 'Accounting', 'Healthcare', 'Logistics', 'Other']} 
-                  placeholder="Select Industry"
-                  onChange={(val) => setFormData(prev => ({ ...prev, industry: val }))}
+                <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Website Link</label>
+                <input 
+                  name="websiteLink"
+                  type="url" 
+                  placeholder="https://yourwebsite.com" 
+                  style={inputStyle} 
+                  required
+                  value={formData.websiteLink}
+                  onChange={handleChange}
                 />
               </div>
 
