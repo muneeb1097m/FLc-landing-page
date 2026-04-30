@@ -222,7 +222,7 @@ const Contact = () => {
                   <input 
                     name="fullName"
                     type="text" 
-                    placeholder="John Doe" 
+                    placeholder="Enter Your Name" 
                     style={inputStyle} 
                     required 
                     value={formData.fullName}
