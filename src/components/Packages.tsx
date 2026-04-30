@@ -36,7 +36,7 @@ const Packages = () => {
         '30–35 SQLs Committed (90 Days)',
         'You just show up to meetings'
       ],
-      cta: 'Most Selling Package',
+      cta: 'Hot Selling',
       popular: true
     },
     {
@@ -98,7 +98,7 @@ const Packages = () => {
                   background: 'var(--primary)', color: 'white', padding: '8px 20px', 
                   borderRadius: '50px', fontSize: '0.8rem', fontWeight: 900, textTransform: 'uppercase'
                 }}>
-                  Best Value
+                  Hot Selling
                 </div>
               )}
               
