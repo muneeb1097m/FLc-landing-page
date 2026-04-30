@@ -51,7 +51,7 @@ const Hero = () => {
       </div>
 
       <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-        <div style={{ 
+        <div className="hero-content-wrapper" style={{ 
           display: 'flex', 
           flexDirection: 'row',
           alignItems: 'center',
@@ -157,7 +157,7 @@ const Hero = () => {
             zIndex: 5
           }}
         >
-          <p style={{ 
+          <p className="expertise-label" style={{ 
             fontSize: '0.75rem', 
             fontWeight: 800, 
             color: 'var(--text-muted)', 
