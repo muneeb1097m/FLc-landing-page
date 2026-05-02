@@ -92,7 +92,7 @@ const CustomCursor = () => {
         alignItems: 'center',
         justifyContent: 'center',
         backdropFilter: isHovered && cursorType !== 'call' ? 'blur(2px)' : 'none',
-        color: 'white',
+        color: '#ffffff',
         opacity: cursorType === 'hidden' ? 0 : 1,
       }}
       animate={{
@@ -101,8 +101,20 @@ const CustomCursor = () => {
     >
       {isHovered && cursorType === 'call' && (
         <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>
-          <Phone size={24} fill="white" />
+          <Phone size={24} fill="#ffffff" />
         </motion.div>
+      )}
+      {isHovered && cursorType === 'view' && (
+        <motion.div 
+          initial={{ scale: 0 }} 
+          animate={{ scale: 1 }}
+          style={{ 
+            width: '8px', 
+            height: '8px', 
+            backgroundColor: 'var(--primary)', 
+            borderRadius: '50%' 
+          }}
+        />
       )}
       {isHovered && cursorType === 'default' && (
         <motion.div

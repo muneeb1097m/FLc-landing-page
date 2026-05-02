@@ -8,10 +8,10 @@ const Phases = () => {
   const phases = [
     {
       number: 'Phase 1',
-      title: 'Foundation (Days 1–15)',
+      title: 'Foundation (Days 1 to 15)',
       description: "We don't run a single ad until this is done. We define your ICP, build your offer, and create all your assets.",
       items: [
-        'ICP — Ideal Customer Profile Definition',
+        'ICP, Ideal Customer Profile Definition',
         'Beachhead Strategy Setup',
         'Offer Creation (One-line Clarity)',
         'Assets: VSL, Landing Pages, Ad Scripts'
@@ -20,11 +20,11 @@ const Phases = () => {
     },
     {
       number: 'Phase 2',
-      title: 'Execution (Days 16–90)',
+      title: 'Execution (Days 16 to 90)',
       description: 'Everything goes live across Organic and Paid channels. Your calendar starts filling up with qualified meetings.',
       items: [
-        'Multi-channel Outreach Launch',
-        'CRM Automated Follow-ups',
+        'Multi channel Outreach Launch',
+        'CRM Automated Follow ups',
         'Daily Reporting & Optimization',
         'Sales Intelligence Analysis'
       ],
@@ -35,7 +35,7 @@ const Phases = () => {
   const timeline = [
     { day: 'Day 16', event: 'Everything goes live' },
     { day: 'Day 19', event: 'First form fills come in' },
-    { day: 'Day 20', event: 'CRM automated follow-ups' },
+    { day: 'Day 20', event: 'CRM automated follow ups' },
     { day: 'Day 21+', event: 'Meetings on your calendar' },
   ];
 
@@ -43,8 +43,13 @@ const Phases = () => {
     <section className="section-padding" style={{ background: 'var(--bg-soft)' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+          <div style={{ marginBottom: '2rem' }}>
+            <a href="#contact" className="btn-premium primary">
+              Talk to Expert
+            </a>
+          </div>
           <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', marginBottom: '1.5rem' }}>
-            The <span style={{ color: 'var(--primary)' }}>90-Day</span> Roadmap
+            The <span style={{ color: 'var(--primary)' }}>90 Day</span> Roadmap
           </h2>
           <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', maxWidth: '700px', margin: '0 auto' }}>
             A structured, two-phase approach to building your entire marketing department.
@@ -87,10 +92,9 @@ const Phases = () => {
         </div>
 
         {/* Mini Timeline */}
-        <div style={{ 
+        <div className="timeline-block" style={{ 
           background: 'var(--gradient-red)', 
-          color: 'white', 
-          padding: '4rem', 
+          color: '#ffffff', 
           borderRadius: '40px', 
           display: 'grid', 
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
@@ -102,7 +106,7 @@ const Phases = () => {
         }}>
           {timeline.map((item, i) => (
             <div key={item.day} style={{ position: 'relative', zIndex: 2 }}>
-              <div style={{ fontSize: '2.5rem', fontWeight: 900, color: 'white', marginBottom: '0.5rem' }}>{item.day}</div>
+              <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#ffffff', marginBottom: '0.5rem' }}>{item.day}</div>
               <div style={{ fontSize: '1rem', fontWeight: 800, color: 'rgba(255,255,255,0.9)' }}>{item.event}</div>
               {i < timeline.length - 1 && (
                 <div className="hidden-mobile" style={{ 

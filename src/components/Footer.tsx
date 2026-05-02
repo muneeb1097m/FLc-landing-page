@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer style={{ background: 'var(--foreground)', color: 'white', padding: '100px 0 40px' }}>
+    <footer style={{ background: 'var(--foreground)', color: '#ffffff', padding: '100px 0 40px' }}>
       <div className="container">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem', marginBottom: '80px' }}>
           <div>

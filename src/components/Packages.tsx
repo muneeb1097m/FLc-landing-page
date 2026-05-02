@@ -31,9 +31,9 @@ const Packages = () => {
         'Everything in Basic, PLUS:',
         'Dedicated Appointment Setter',
         'GoHighLevel CRM Setup',
-        'Automated Follow-up Sequences',
+        'Automated Follow up Sequences',
         'Sales Intelligence Report',
-        '30–35 SQLs Committed (90 Days)',
+        '30 to 35 SQLs Committed (90 Days)',
         'You just show up to meetings'
       ],
       cta: 'Talk to Expert',
@@ -47,7 +47,7 @@ const Packages = () => {
       description: 'Maximum scale for established agencies looking for market dominance.',
       features: [
         'Everything in Intermediate DOUBLED',
-        '60–70 SQLs Committed (90 Days)',
+        '60 to 70 SQLs Committed (90 Days)',
         'Double Outreach & Pipeline',
         'Priority Strategist Access',
         'Advanced CAPI Integration',
@@ -79,10 +79,10 @@ const Packages = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={!plan.popular ? "package-card" : ""}
+              className="package-card"
               style={{ 
-                background: plan.popular ? 'var(--foreground)' : 'white', 
-                color: plan.popular ? 'white' : 'var(--foreground)',
+                background: plan.popular ? 'var(--foreground)' : '#ffffff', 
+                color: plan.popular ? '#ffffff' : 'var(--foreground)',
                 padding: '3rem', 
                 borderRadius: '40px', 
                 border: plan.popular ? 'none' : '1px solid var(--border)',
@@ -96,7 +96,7 @@ const Packages = () => {
               {plan.popular && (
                 <div style={{ 
                   position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)',
-                  background: 'var(--primary)', color: 'white', padding: '8px 20px', 
+                  background: 'var(--primary)', color: '#ffffff', padding: '8px 20px', 
                   borderRadius: '50px', fontSize: '0.8rem', fontWeight: 900, textTransform: 'uppercase'
                 }}>
                   Hot Selling
@@ -150,7 +150,7 @@ const Packages = () => {
 
         <div style={{ marginTop: '60px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
           <Info size={16} />
-          <span>All packages include a 20-Day Performance Guarantee and ownership transfer.</span>
+          <span>All packages include a 20 Day Performance Guarantee and ownership transfer.</span>
         </div>
       </div>
     </section>

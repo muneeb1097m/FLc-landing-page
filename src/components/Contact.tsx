@@ -8,7 +8,7 @@ const inputStyle = {
   padding: '1rem 1.5rem',
   borderRadius: '16px',
   border: '1px solid var(--border)',
-  background: 'white',
+  background: '#ffffff',
   fontSize: '1rem',
   outline: 'none',
   transition: 'var(--transition-smooth)',
@@ -54,7 +54,7 @@ const CustomSelect = ({ options, placeholder, onChange }: { options: string[], p
               top: '110%', 
               left: 0, 
               right: 0, 
-              background: 'white', 
+              background: '#ffffff', 
               borderRadius: '24px', 
               border: '1px solid var(--border)',
               boxShadow: 'var(--shadow-premium)',
@@ -146,14 +146,14 @@ const Contact = () => {
 
   if (status === 'success') {
     return (
-      <section className="section-padding" style={{ background: 'white', minHeight: '600px', display: 'flex', alignItems: 'center' }}>
+      <section className="section-padding" style={{ background: '#ffffff', minHeight: '600px', display: 'flex', alignItems: 'center' }}>
         <div className="container" style={{ textAlign: 'center' }}>
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             style={{ background: 'var(--bg-soft)', padding: '4rem', borderRadius: '40px', maxWidth: '600px', margin: '0 auto', border: '1px solid var(--border)' }}
           >
-            <div style={{ width: '80px', height: '80px', background: 'var(--primary)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 2rem', color: 'white' }}>
+            <div style={{ width: '80px', height: '80px', background: 'var(--primary)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 2rem', color: '#ffffff' }}>
               <Send size={40} />
             </div>
             <h2 style={{ marginBottom: '1rem' }}>Request Received!</h2>
@@ -164,6 +164,7 @@ const Contact = () => {
               href="https://wa.me/923244898766" 
               target="_blank" 
               rel="noopener noreferrer" 
+              data-cursor="call"
               className="btn-premium secondary" 
               style={{ marginTop: '2rem', display: 'inline-flex', textDecoration: 'none', gap: '10px' }}
             >
@@ -184,7 +185,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="section-padding" style={{ background: 'white', position: 'relative', overflow: 'hidden' }}>
+    <section id="contact" className="section-padding" style={{ background: '#ffffff', position: 'relative', overflow: 'hidden' }}>
       {/* Decorative Blur */}
       <div style={{ position: 'absolute', bottom: '-10%', left: '-10%', width: '400px', height: '400px', background: 'var(--primary-soft)', borderRadius: '50%', filter: 'blur(100px)' }}></div>
 
@@ -209,6 +210,7 @@ const Contact = () => {
                     href="https://wa.me/923244898766" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    data-cursor="call"
                     style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--foreground)', textDecoration: 'none' }}
                   >
                     +92 324 4898766
@@ -322,7 +324,7 @@ const Contact = () => {
                 }}
               >
                 <Send size={20} className={status === 'loading' ? 'animate-pulse' : ''} />
-                {status === 'loading' ? 'Sending Request...' : 'Book My Strategy Call'}
+                {status === 'loading' ? 'Sending Request...' : 'Talk to Expert'}
               </button>
               
               {status === 'error' && (

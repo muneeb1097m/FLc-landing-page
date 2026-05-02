@@ -47,8 +47,13 @@ body {
   background: var(--bg-white);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   cursor: none; /* Hide default cursor */
+  
+  /* Prevent text overflow */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Ensure interactive elements also hide default cursor */
@@ -57,9 +62,14 @@ a, button, input, select, textarea, .interactive {
 }
 
 .container {
-  width: 94%;
+  width: 90%;
   max-width: var(--container-max);
   margin: 0 auto;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
 }
 
 @media (min-width: 768px) {
@@ -155,17 +165,31 @@ p {
 }
 
 @media (max-width: 768px) {
-  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 1.5rem; }
   .hidden-mobile { display: none !important; }
+  .problem-card, .package-card, .phase-card { padding: 2rem !important; }
 }
 
-@media (max-width: 640px) {
-  .section-padding { padding: 80px 0; }
+@media (max-width: 480px) {
+  h1 { font-size: clamp(2rem, 8vw, 2.5rem) !important; }
+  h2 { font-size: clamp(1.8rem, 7vw, 2.2rem) !important; }
+  .section-padding { padding: 60px 0; }
+  .btn-premium { padding: 0.8rem 1.8rem; font-size: 0.9rem; }
 }
 
 /* Sections */
 .section-padding {
   padding: 120px 0;
+}
+
+.timeline-block {
+  padding: 4rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-block {
+    padding: 2.5rem 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {

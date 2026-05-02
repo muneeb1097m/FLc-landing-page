@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'How It Works', href: '#how-it-works' },
-    { name: 'Industries', href: '#industries' },
+    { name: 'Ops Hub', href: '#ops-hub' },
     { name: 'Packages', href: '#packages' },
     { name: 'Proof', href: '#proof' },
   ];
@@ -63,6 +63,7 @@ const Navbar = () => {
               <Link 
                 key={link.name} 
                 href={link.href}
+                data-cursor="view"
                 className="nav-link"
                 style={{ 
                   fontSize: '0.9rem', 
@@ -111,7 +112,7 @@ const Navbar = () => {
           right: isMobileMenuOpen ? 0 : '-100%',
           width: '80%',
           height: '100vh',
-          background: 'white',
+          background: '#ffffff',
           zIndex: 1001,
           padding: '80px 40px',
           boxShadow: 'var(--shadow-premium)',
@@ -132,13 +133,14 @@ const Navbar = () => {
           <Link 
             key={link.name} 
             href={link.href}
+            data-cursor="view"
             style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--foreground)', textDecoration: 'none' }}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             {link.name}
           </Link>
         ))}
-        <a href="#contact" className="btn-premium primary w-full" style={{ justifyContent: 'center' }}>
+        <a href="#contact" data-cursor="call" className="btn-premium primary w-full" style={{ justifyContent: 'center' }}>
           Talk to Expert
         </a>
       </div>

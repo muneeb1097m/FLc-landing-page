@@ -37,7 +37,7 @@ const Hero = () => {
       paddingTop: 'calc(var(--nav-height) + 60px)',
       paddingBottom: '100px',
       overflow: 'hidden',
-      background: 'white'
+      background: '#ffffff'
     }}>
       {/* Premium Background Elements */}
       <div className="mesh-bg">
@@ -106,10 +106,10 @@ const Hero = () => {
                 color: 'var(--text-muted)', 
                 marginBottom: '4rem',
                 lineHeight: 1.6,
-                maxWidth: '750px'
+                maxWidth: '850px'
               }}
             >
-              In <span style={{ color: 'var(--foreground)', fontWeight: 800 }}>90 days</span>, we become your entire marketing department — building a system that delivers <span style={{ color: 'var(--foreground)', fontWeight: 800 }}>Sales Qualified Leads</span> directly to your calendar.
+              In <span style={{ color: 'var(--foreground)', fontWeight: 800 }}>90 days</span>, we become your entire marketing department, building a complete lead generation system that delivers <span style={{ color: 'var(--foreground)', fontWeight: 800 }}>Sales Qualified Leads</span> directly to your calendar.
             </motion.p>
 
             {/* CTAs */}
@@ -127,6 +127,7 @@ const Hero = () => {
               </motion.a>
               <motion.a 
                 href="#how-it-works"
+                data-cursor="view"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-premium secondary" 
@@ -150,10 +151,11 @@ const Hero = () => {
             display: 'flex',
             flexDirection: 'column',
             gap: '1.5rem',
-            width: 'calc(100% + 10vw)',
-            marginLeft: '-5vw',
+            width: '100%',
+            marginLeft: '0',
             position: 'relative',
-            zIndex: 5
+            zIndex: 5,
+            overflow: 'hidden'
           }}
         >
           <p className="expertise-label" style={{ 

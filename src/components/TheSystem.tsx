@@ -13,7 +13,7 @@ const TheSystem = () => {
   ];
 
   return (
-    <section id="how-it-works" className="section-padding" style={{ background: 'white', position: 'relative', overflow: 'hidden' }}>
+    <section id="how-it-works" className="section-padding" style={{ background: '#ffffff', position: 'relative', overflow: 'hidden' }}>
       <div className="mesh-bg">
         <div className="mesh-ball" style={{ top: '40%', right: '10%', width: '300px', height: '300px', background: 'var(--primary)', opacity: 0.05, animationDelay: '-12s' }}></div>
       </div>
@@ -34,7 +34,7 @@ const TheSystem = () => {
                 This is not version one. This system has been built, broken, and improved across real client accounts for 6 years. What you receive is what survived real markets and real budgets.
               </p>
               <p style={{ fontSize: '1.1rem', marginBottom: '2.5rem', lineHeight: '1.8' }}>
-                And we use it ourselves — <span style={{ fontWeight: 800, color: 'var(--foreground)' }}>FLC runs on the same system we build for clients.</span> Which is why we are consistently growing and signing new clients every single week.
+                And we use it ourselves, <span style={{ fontWeight: 800, color: 'var(--foreground)' }}>FLC runs on the same system we build for clients.</span> Which is why we are consistently growing and signing new clients every single week.
               </p>
               
               <div style={{ 
@@ -45,14 +45,14 @@ const TheSystem = () => {
               }}>
                 <h4 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: 'var(--primary)' }}>The SQL Commitment</h4>
                 <p style={{ fontWeight: 600, color: 'var(--foreground)' }}>
-                  If we fall short of our SQL target — we keep running at no extra cost until every meeting is delivered. Your 90 days don't end until the number is met.
+                  If we fall short of our SQL target, we keep running at no extra cost until every meeting is delivered. Your 90 days don't end until the number is met.
                 </p>
               </div>
             </motion.div>
           </div>
 
           {/* Stats Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
+          <div className="stats-grid">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -83,6 +83,16 @@ const TheSystem = () => {
         </div>
       </div>
       <style jsx>{`
+        .stats-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+        }
+        @media (max-width: 640px) {
+          .stats-grid {
+            grid-template-columns: 1fr;
+          }
+        }
         .stat-card:hover {
           transform: translateY(-5px);
           background: white;

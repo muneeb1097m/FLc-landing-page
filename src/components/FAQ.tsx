@@ -7,20 +7,32 @@ import { HelpCircle, ArrowRightCircle } from 'lucide-react';
 const FAQ = () => {
   const faqs = [
     {
-      q: "I've tried agencies before and they failed.",
-      a: "They likely ran ads without an ICP definition or a follow-up system. We don't just run ads; we build the entire backend system. Book a 15-min audit to see the difference."
+      q: "What exactly is this service, and what are your core expertise?",
+      a: "Our core focus is generating Sales Qualified Leads (SQLs) rather than generic digital marketing. We find pre-interested buyers via Meta, Google, and LinkedIn, filter them rigorously, and bring them directly to your calendar."
     },
     {
-      q: "What if you miss the SQL target?",
-      a: "We keep running at no extra cost until every committed SQL is delivered. Your 90 days don't end until the number is met."
+      q: "The package is too expensive, how do we keep costs minimum?",
+      a: "The investment is designed to pay for itself; closing even one high-value client often covers the first month. Tight budgets can start with the Basic package (PKR 200,000) for raw leads and upgrade later."
     },
     {
-      q: "Do I own the assets after 90 days?",
-      a: "Yes, 100%. You own the CRM setup, the landing pages, the ad accounts, and the lead database. We even train your team if you want to take it in-house."
+      q: "Is the ad spend included in the package?",
+      a: "No, ad spend is separate and paid directly to platforms. It typically ranges from PKR 30,000 to PKR 100,000 per month depending on your specific market and goals."
     },
     {
-      q: "How do you ensure leads are 'Qualified'?",
-      a: "Every lead is pre-vetted by our appointment setters based on your exact ICP. We don't book a meeting unless they meet your budget and role criteria."
+      q: "Who owns the system and CRM after the 90-day period?",
+      a: "You have 100% ownership. This includes the GHL CRM sub-account, landing pages, ad campaigns, and automation workflows. You can exit anytime with a 15-day notice."
+    },
+    {
+      q: "Meta ads often bring garbage leads, how do you prevent this?",
+      a: "Garbage leads happen when the ICP is poorly defined. Our first 15 days are dedicated purely to ICP research and validation, ensuring we target the correct pain points before going live."
+    },
+    {
+      q: "Do you offer a performance guarantee?",
+      a: "We offer a 20-day performance guarantee. If no meaningful progress (ICP validation and live campaigns) is made in the first 20 days, you have the option to exit with a refund for that cycle."
+    },
+    {
+      q: "I am a founder, not a salesperson. How will I close these deals?",
+      a: "The meetings are pre-qualified and consulting-based. Taking a meeting is similar to responding to a high-intent proposal. We also provide a closing script to assist you."
     }
   ];
 
@@ -44,13 +56,13 @@ const FAQ = () => {
               whileInView={{ opacity: 1, x: 0 }}
               whileHover={{ 
                 backgroundColor: 'var(--primary)',
-                color: 'white',
+                color: '#ffffff',
                 y: -10,
                 boxShadow: 'var(--shadow-red)'
               }}
               viewport={{ once: true }}
               style={{ 
-                background: 'white', 
+                background: '#ffffff', 
                 padding: '2.5rem', 
                 borderRadius: '32px', 
                 border: '1px solid var(--border)',
@@ -58,7 +70,13 @@ const FAQ = () => {
                 flexDirection: 'column',
                 gap: '1.5rem',
                 cursor: 'default',
-                transition: 'background-color 0.3s ease, color 0.3s ease'
+                transition: 'background-color 0.3s ease, color 0.3s ease',
+                ...(i === faqs.length - 1 && faqs.length % 2 !== 0 ? {
+                  gridColumn: '1 / -1',
+                  maxWidth: '800px',
+                  margin: '0 auto',
+                  width: '100%'
+                } : {})
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', color: 'inherit' }}>
@@ -74,7 +92,7 @@ const FAQ = () => {
           marginTop: '60px', 
           padding: '2.5rem', 
           background: 'var(--gradient-red)', 
-          color: 'white', 
+          color: '#ffffff', 
           borderRadius: '32px', 
           textAlign: 'center',
           display: 'flex',
@@ -83,7 +101,7 @@ const FAQ = () => {
           gap: '1rem',
           boxShadow: 'var(--shadow-red)'
         }}>
-          <p style={{ fontWeight: 900, fontSize: '1.25rem', color: 'white' }}>Have a specific question about your industry?</p>
+          <p style={{ fontWeight: 900, fontSize: '1.25rem', color: '#ffffff' }}>Have a specific question about your industry?</p>
           <a 
             href="https://wa.me/923244898766" 
             target="_blank" 
@@ -93,7 +111,7 @@ const FAQ = () => {
               display: 'flex', 
               alignItems: 'center', 
               gap: '12px', 
-              color: 'white', 
+              color: '#ffffff', 
               fontWeight: 900, 
               textDecoration: 'none',
               background: 'rgba(255,255,255,0.2)', 

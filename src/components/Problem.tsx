@@ -100,10 +100,10 @@ const Problem = () => {
             <h3>The "Agency" Trap</h3>
             <p>
               Ads ran. Invoices were paid. <span style={{ color: 'var(--primary)', fontWeight: 800 }}>Zero qualified meetings</span> came in. 
-              The reason is always the same — no ICP, no system, no follow-up. Just ads.
+              The reason is always the same, no ICP, no system, no follow up. Just ads.
             </p>
             <ul className="problem-list">
-              {['No ICP defined', 'No system built', 'Zero follow-up'].map((item) => (
+              {['No ICP defined', 'No system built', 'Zero follow up'].map((item) => (
                 <li key={item}><XCircle size={16} /> {item}</li>
               ))}
             </ul>
@@ -177,19 +177,21 @@ const RevealQuote = () => {
         position: 'relative',
         cursor: 'none',
         overflow: 'hidden',
-        height: '350px',
+        minHeight: '350px',
+        height: 'auto',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         background: 'var(--gradient-red)',
         boxShadow: 'var(--shadow-red)',
-        userSelect: 'none'
+        userSelect: 'none',
+        padding: '2rem 1rem'
       }}
     >
       {/* Base Layer: White Text on Red BG */}
-      <div style={{ textAlign: 'center', color: 'white', padding: '40px', width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <p style={{ fontSize: 'clamp(1.5rem, 4vw, 2.8rem)', fontWeight: 900, lineHeight: 1.3, margin: 0, width: '100%', maxWidth: '1000px', color: 'white' }}>
-          "Either way, nobody built you a <span style={{ borderBottom: '3px solid white', paddingBottom: '4px' }}>system</span>. <br />
+      <div style={{ textAlign: 'center', color: '#ffffff', padding: '40px', width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <p style={{ fontSize: 'clamp(1.5rem, 4vw, 2.8rem)', fontWeight: 900, lineHeight: 1.3, margin: 0, width: '100%', maxWidth: '1000px', color: '#ffffff' }}>
+          "Either way, nobody built you a <span style={{ borderBottom: '3px solid #ffffff', paddingBottom: '4px' }}>system</span>. <br />
           That is the only thing we fix."
         </p>
       </div>
@@ -205,7 +207,7 @@ const RevealQuote = () => {
         style={{ 
           position: 'absolute',
           inset: 0,
-          background: 'white',
+          background: '#ffffff',
           color: 'var(--primary)',
           display: 'flex',
           alignItems: 'center',
