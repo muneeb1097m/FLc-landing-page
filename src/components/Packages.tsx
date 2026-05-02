@@ -17,7 +17,7 @@ const Packages = () => {
         'Qualified replies to your inbox',
         'You handle conversations & closing',
         'Weekly Handholding Support',
-        'No fixed SQL commitment'
+        'Minimum 3 LinkedIn IDs required'
       ],
       cta: 'Talk to Expert',
       popular: false
@@ -26,6 +26,7 @@ const Packages = () => {
       name: 'Intermediate',
       price: 'PKR 280,000',
       period: 'per month',
+      pipeline: '$30k - $35k',
       description: 'Our flagship system. Total automation of your sales pipeline.',
       features: [
         'Everything in Basic, PLUS:',
@@ -34,7 +35,7 @@ const Packages = () => {
         'Automated Follow up Sequences',
         'Sales Intelligence Report',
         '30 to 35 SQLs Committed (90 Days)',
-        'You just show up to meetings'
+        'Minimum 3 LinkedIn IDs required'
       ],
       cta: 'Talk to Expert',
       popular: true
@@ -44,6 +45,7 @@ const Packages = () => {
       price: 'PKR 435,000',
       originalPrice: 'PKR 560,000',
       period: 'per month',
+      pipeline: '$60k - $70k',
       description: 'Maximum scale for established agencies looking for market dominance.',
       features: [
         'Everything in Intermediate DOUBLED',
@@ -52,7 +54,7 @@ const Packages = () => {
         'Priority Strategist Access',
         'Advanced CAPI Integration',
         'Save PKR 125,000 total',
-        'Omni-channel Domination'
+        'Minimum 3 LinkedIn IDs required'
       ],
       cta: 'Talk to Expert',
       popular: false
@@ -104,7 +106,7 @@ const Packages = () => {
               )}
               
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{plan.name}</h3>
-              <div style={{ marginBottom: '2rem' }}>
+              <div style={{ marginBottom: '1.5rem' }}>
                 {plan.originalPrice && (
                   <span style={{ 
                     fontSize: '1rem', 
@@ -120,6 +122,21 @@ const Packages = () => {
                 <span style={{ fontSize: '2rem', fontWeight: 900 }}>{plan.price}</span>
                 <span style={{ opacity: 0.6, fontSize: '0.9rem', marginLeft: '8px' }}>{plan.period}</span>
               </div>
+
+              {plan.pipeline && (
+                <div style={{ 
+                  background: plan.popular ? 'rgba(255,255,255,0.1)' : 'var(--primary-soft)', 
+                  padding: '1.2rem', 
+                  borderRadius: '20px', 
+                  marginBottom: '1.5rem',
+                  border: `1px dashed ${plan.popular ? 'rgba(255,255,255,0.2)' : 'var(--primary)'}`
+                }}>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', opacity: 0.7, marginBottom: '4px' }}>90-Day Pipeline Value</div>
+                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: plan.popular ? '#ffffff' : 'var(--primary)' }}>{plan.pipeline}</div>
+                  <div style={{ fontSize: '0.7rem', opacity: 0.6, marginTop: '4px', lineHeight: 1.4 }}>Total opportunity value added to your sales engine.</div>
+                </div>
+              )}
+
               <p style={{ 
                 fontSize: '0.95rem', 
                 opacity: 0.8, 
@@ -148,7 +165,52 @@ const Packages = () => {
           ))}
         </div>
 
-        <div style={{ marginTop: '60px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+        {/* What's Not Included Section */}
+        <div style={{ 
+          marginTop: '60px', 
+          background: '#ffffff', 
+          borderRadius: '40px', 
+          padding: '3rem', 
+          border: '1px solid var(--border)',
+          boxShadow: 'var(--shadow-premium)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '2rem' }}>
+            <div style={{ width: '40px', height: '40px', background: 'var(--primary-soft)', color: 'var(--primary)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Info size={20} />
+            </div>
+            <h4 style={{ fontSize: '1.5rem', fontWeight: 900 }}>What is <span style={{ color: 'var(--primary)' }}>Not Included</span></h4>
+          </div>
+
+          <div className="grid-2" style={{ gap: '2rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <div style={{ padding: '1.5rem', background: 'var(--bg-soft)', borderRadius: '24px' }}>
+                <div style={{ fontWeight: 800, fontSize: '0.95rem', marginBottom: '0.5rem', color: 'var(--foreground)' }}>Service Fee Only</div>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>The package prices listed cover the deployment of our 12-person specialized team on your project.</p>
+              </div>
+              <div style={{ padding: '1.5rem', background: 'var(--bg-soft)', borderRadius: '24px' }}>
+                <div style={{ fontWeight: 800, fontSize: '0.95rem', marginBottom: '0.5rem', color: 'var(--foreground)' }}>Ad Spend</div>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Paid directly by the client to platforms (Meta/Google) from their own pocket.</p>
+              </div>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <div style={{ padding: '1.5rem', background: 'var(--bg-soft)', borderRadius: '24px' }}>
+                <div style={{ fontWeight: 800, fontSize: '0.95rem', marginBottom: '0.5rem', color: 'var(--foreground)' }}>3rd-Party Tool Costs</div>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Any software or automation platform costs are borne by the client.</p>
+              </div>
+              <div style={{ padding: '1.5rem', background: 'var(--bg-soft)', borderRadius: '24px' }}>
+                <div style={{ fontWeight: 800, fontSize: '0.95rem', marginBottom: '0.5rem', color: 'var(--foreground)' }}>Bulk Emailing Costs</div>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Infrastructure and sending costs for cold email campaigns are borne by the client.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div style={{ marginTop: '2rem', padding: '1rem', background: 'var(--primary-soft)', borderRadius: '16px', display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--primary)', fontSize: '0.85rem', fontWeight: 700 }}>
+            <Check size={16} />
+            <span>Client Prerequisite: A minimum of 3 LinkedIn IDs must be provided to initiate the system.</span>
+          </div>
+        </div>
+
+        <div style={{ marginTop: '40px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', color: 'var(--text-muted)', fontSize: '0.9rem', opacity: 0.6 }}>
           <Info size={16} />
           <span>All packages include a 20 Day Performance Guarantee and ownership transfer.</span>
         </div>
