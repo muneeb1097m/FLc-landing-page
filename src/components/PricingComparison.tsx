@@ -16,7 +16,7 @@ const PricingComparison = () => {
     { name: 'Priority Strategist Access', basic: false, intermediate: false, advanced: true },
     { name: 'Advanced CAPI Integration', basic: false, intermediate: false, advanced: true },
     { name: 'SQL Commitment (90 Days)', basic: 'Best Effort', intermediate: '30 - 35', advanced: '60 - 70' },
-    { name: '90-Day Pipeline Value', basic: 'Variable', intermediate: '$30k - $35k', advanced: '$60k - $70k' },
+    { name: '90-Day Pipeline Value', basic: 'Variable', intermediate: 'Approx. $30k - $35k', advanced: 'Approx. $60k - $70k' },
   ];
 
   return (

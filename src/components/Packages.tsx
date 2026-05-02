@@ -26,7 +26,7 @@ const Packages = () => {
       name: 'Intermediate',
       price: 'PKR 280,000',
       period: 'per month',
-      pipeline: '$30k - $35k',
+      pipeline: 'Approx. $30k - $35k',
       description: 'Our flagship system. Total automation of your sales pipeline.',
       features: [
         'Everything in Basic, PLUS:',
@@ -45,7 +45,7 @@ const Packages = () => {
       price: 'PKR 435,000',
       originalPrice: 'PKR 560,000',
       period: 'per month',
-      pipeline: '$60k - $70k',
+      pipeline: 'Approx. $60k - $70k',
       description: 'Maximum scale for established agencies looking for market dominance.',
       features: [
         'Everything in Intermediate DOUBLED',
@@ -133,7 +133,7 @@ const Packages = () => {
                 }}>
                   <div style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', opacity: 0.7, marginBottom: '4px' }}>90-Day Pipeline Value</div>
                   <div style={{ fontSize: '1.5rem', fontWeight: 900, color: plan.popular ? '#ffffff' : 'var(--primary)' }}>{plan.pipeline}</div>
-                  <div style={{ fontSize: '0.7rem', opacity: 0.6, marginTop: '4px', lineHeight: 1.4 }}>Total opportunity value added to your sales engine.</div>
+                  <div style={{ fontSize: '0.7rem', opacity: 0.6, marginTop: '4px', lineHeight: 1.4 }}>Estimated based on avg. deal size of $700 - $1,000 per SQL.</div>
                 </div>
               )}
 
