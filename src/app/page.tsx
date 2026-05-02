@@ -11,6 +11,7 @@ import Department from '@/components/Department';
 import Proof from '@/components/Proof';
 import Packages from '@/components/Packages';
 import PricingComparison from '@/components/PricingComparison';
+import Ownership from '@/components/Ownership';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -31,6 +32,7 @@ export default function Home() {
       <Proof />
       <Packages />
       <PricingComparison />
+      <Ownership />
       <FAQ />
       <Contact />
       <Footer />
