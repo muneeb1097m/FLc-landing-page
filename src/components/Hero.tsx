@@ -126,14 +126,14 @@ const Hero = () => {
                 Talk to Expert
               </motion.a>
               <motion.a 
-                href="#how-it-works"
-                data-cursor="view"
+                href="#contact"
+                data-cursor="call"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-premium secondary" 
                 style={{ height: '64px', padding: '0 2.5rem', fontSize: '1.1rem', cursor: 'none' }}
               >
-                How It Works 
+                Talk to Expert
                 <ArrowRight size={20} />
               </motion.a>
             </motion.div>

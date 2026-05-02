@@ -16,6 +16,7 @@ const PricingComparison = () => {
     { name: 'Priority Strategist Access', basic: false, intermediate: false, advanced: true },
     { name: 'Advanced CAPI Integration', basic: false, intermediate: false, advanced: true },
     { name: 'SQL Commitment (90 Days)', basic: 'Best Effort', intermediate: '30 - 35', advanced: '60 - 70' },
+    { name: '90-Day Pipeline Value', basic: 'Variable', intermediate: '$30k - $35k', advanced: '$60k - $70k' },
   ];
 
   return (
@@ -85,7 +86,7 @@ const PricingComparison = () => {
               Need a custom high-volume plan? <span style={{ color: 'var(--primary)', fontWeight: 700 }}>Let's talk.</span>
             </p>
             <a href="#contact" className="btn-premium primary">
-              Book Your Strategy Call
+              Talk to Expert
             </a>
           </div>
         </div>
