@@ -130,6 +130,12 @@ const Contact = () => {
 
       if (response.ok) {
         setStatus('success');
+        
+        // Track custom event and tag in Microsoft Clarity
+        if (typeof window !== 'undefined' && (window as any).clarity) {
+          (window as any).clarity("event", "form_submit");
+          (window as any).clarity("set", "FormSubmitted", "true");
+        }
       } else {
         setStatus('error');
       }
