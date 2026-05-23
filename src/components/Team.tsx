@@ -4,31 +4,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, Star, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const LinkedinIcon = ({ size = 24, ...props }: { size?: number } & React.SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    {...props}
-  >
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-    <rect width="4" height="12" x="2" y="9" />
-    <circle cx="4" cy="4" r="2" />
-  </svg>
-);
+
 
 interface TeamMember {
   name: string;
   role: string;
   bio: string;
   image: string;
-  linkedin?: string;
   expertise: string;
 }
 
@@ -264,27 +246,7 @@ const Team = () => {
     }
   };
 
-  const linkedinHoverVariants: any = {
-    initial: {
-      color: 'var(--text-muted)',
-      backgroundColor: 'var(--bg-soft)',
-      rotate: 0
-    },
-    visible: {
-      color: 'var(--text-muted)',
-      backgroundColor: 'var(--bg-soft)',
-      rotate: 0
-    },
-    cardHovered: {
-      color: 'var(--primary)',
-      backgroundColor: 'var(--primary-soft)',
-      rotate: 360,
-      transition: {
-        duration: 0.6,
-        ease: [0.16, 1, 0.3, 1]
-      }
-    }
-  };
+
 
   const accentHoverVariants: any = {
     initial: {
@@ -465,32 +427,10 @@ const Team = () => {
 
                   {/* Text Info */}
                   <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+                    <div style={{ marginBottom: '0.5rem' }}>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--foreground)' }}>
                         {member.name}
                       </h3>
-                      
-                      {/* LinkedIn Icon Link */}
-                      <motion.a 
-                        href="#contact" 
-                        data-cursor="call"
-                        variants={linkedinHoverVariants}
-                        whileHover={{ 
-                          color: '#ffffff', 
-                          backgroundColor: 'var(--primary)',
-                          scale: 1.08
-                        }}
-                        style={{ 
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          width: '34px',
-                          height: '34px',
-                          borderRadius: '50%'
-                        }}
-                      >
-                        <LinkedinIcon size={16} />
-                      </motion.a>
                     </div>
 
                     {/* Subtitle Role */}
