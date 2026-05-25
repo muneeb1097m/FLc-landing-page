@@ -282,7 +282,7 @@ const Contact = () => {
                 <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Website Link</label>
                 <input 
                   name="websiteLink"
-                  type="url" 
+                  type="text" 
                   placeholder="https://yourwebsite.com" 
                   style={inputStyle} 
                   required
