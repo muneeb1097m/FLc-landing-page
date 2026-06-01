@@ -272,7 +272,7 @@ const Hero = () => {
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
                   <div className="grid-2" style={{ gap: '1.2rem' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                      <label style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Full Name</label>
+                      <label style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Full Name <span style={{ color: 'var(--primary)' }}>*</span></label>
                       <input 
                         name="fullName"
                         type="text" 
@@ -290,7 +290,6 @@ const Hero = () => {
                         type="text" 
                         placeholder="Agency Name" 
                         style={inputStyle} 
-                        required
                         value={formData.businessName}
                         onChange={handleChange}
                       />
@@ -298,7 +297,7 @@ const Hero = () => {
                   </div>
                   
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    <label style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Email Address</label>
+                    <label style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Email Address <span style={{ color: 'var(--primary)' }}>*</span></label>
                     <input 
                       name="email"
                       type="email" 
@@ -317,17 +316,16 @@ const Hero = () => {
                       type="text" 
                       placeholder="https://yourwebsite.com" 
                       style={inputStyle} 
-                      required
                       value={formData.websiteLink}
                       onChange={handleChange}
                     />
                   </div>
 
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    <label style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>WhatsApp Number</label>
+                    <label style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>WhatsApp Number <span style={{ color: 'var(--primary)' }}>*</span></label>
                     <input 
                       name="whatsapp"
-                      type="text" 
+                      type="tel" 
                       placeholder="03XX-XXXXXXX" 
                       style={inputStyle} 
                       required
@@ -342,7 +340,6 @@ const Hero = () => {
                       name="challenge"
                       placeholder="Tell us what's holding you back..." 
                       style={{ ...inputStyle, height: '90px', resize: 'none', padding: '1.2rem' }}
-                      required
                       value={formData.challenge}
                       onChange={handleChange}
                     ></textarea>

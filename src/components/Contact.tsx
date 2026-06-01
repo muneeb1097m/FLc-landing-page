@@ -240,7 +240,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div className="grid-2" style={{ gap: '1.5rem' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Full Name</label>
+                  <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Full Name <span style={{ color: 'var(--primary)' }}>*</span></label>
                   <input 
                     name="fullName"
                     type="text" 
@@ -258,7 +258,6 @@ const Contact = () => {
                     type="text" 
                     placeholder="Agency Name" 
                     style={inputStyle} 
-                    required
                     value={formData.businessName}
                     onChange={handleChange}
                   />
@@ -266,7 +265,7 @@ const Contact = () => {
               </div>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Email Address</label>
+                <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>Email Address <span style={{ color: 'var(--primary)' }}>*</span></label>
                 <input 
                   name="email"
                   type="email" 
@@ -285,17 +284,16 @@ const Contact = () => {
                   type="text" 
                   placeholder="https://yourwebsite.com" 
                   style={inputStyle} 
-                  required
                   value={formData.websiteLink}
                   onChange={handleChange}
                 />
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>WhatsApp Number</label>
+                <label style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', opacity: 0.7 }}>WhatsApp Number <span style={{ color: 'var(--primary)' }}>*</span></label>
                 <input 
                   name="whatsapp"
-                  type="text" 
+                  type="tel" 
                   placeholder="03XX-XXXXXXX" 
                   style={inputStyle} 
                   required
@@ -309,7 +307,6 @@ const Contact = () => {
                   name="challenge"
                   placeholder="Tell us what's holding you back..." 
                   style={{ ...inputStyle, height: '120px', resize: 'none', padding: '1.5rem' }}
-                  required
                   value={formData.challenge}
                   onChange={handleChange}
                 ></textarea>
