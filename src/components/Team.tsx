@@ -587,7 +587,7 @@ const LeadershipCard: React.FC<LeadershipCardProps> = ({ leader, onClick }) => {
       style={{
         background: '#ffffff',
         border: '1.5px solid var(--border)',
-        borderRadius: '40px',
+        borderRadius: '24px',
         padding: '1.5rem',
         display: 'flex',
         flexDirection: 'column',
@@ -690,7 +690,7 @@ const LeadershipCard: React.FC<LeadershipCardProps> = ({ leader, onClick }) => {
               {/* Quote */}
               <div style={{ 
                 background: 'var(--bg-soft)',
-                borderRadius: '16px',
+                borderRadius: '12px',
                 padding: '0.75rem 1rem',
                 marginTop: '8px',
                 width: '100%',
@@ -744,7 +744,7 @@ const DepartmentCard: React.FC<DepartmentCardProps> = ({ dept }) => {
       style={{
         background: '#ffffff',
         border: '1.5px solid var(--border)',
-        borderRadius: '40px',
+        borderRadius: '32px',
         padding: '2.5rem',
         display: 'flex',
         flexDirection: 'column',
