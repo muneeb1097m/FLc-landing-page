@@ -286,6 +286,7 @@ p {
   gap: 1.5rem;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
+  overflow: hidden;
 }
 
 .problem-card:hover {
@@ -332,6 +333,7 @@ p {
   gap: 2rem;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
+  overflow: hidden;
 }
 
 .package-card:hover {
@@ -366,6 +368,7 @@ p {
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .phase-card:hover {

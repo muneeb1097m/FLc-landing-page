@@ -40,13 +40,25 @@ const TheSystem = () => {
               <div style={{ 
                 padding: '2rem', 
                 background: 'var(--primary-soft)', 
-                borderRadius: '24px', 
-                borderLeft: '4px solid var(--primary)' 
+                borderRadius: '24px',
+                display: 'flex',
+                gap: '20px',
+                alignItems: 'stretch'
               }}>
-                <h4 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: 'var(--primary)' }}>The SQL Commitment</h4>
-                <p style={{ fontWeight: 600, color: 'var(--foreground)' }}>
-                  If we fall short of our SQL target, we keep running at no extra cost until every meeting is delivered. Your 90 days don't end until the number is met.
-                </p>
+                {/* Vertical Accent Bar (Perfect Rounded Caps) */}
+                <div style={{ 
+                  width: '4px', 
+                  background: 'var(--primary)', 
+                  borderRadius: '10px',
+                  flexShrink: 0
+                }} />
+                
+                <div>
+                  <h4 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: 'var(--primary)' }}>The SQL Commitment</h4>
+                  <p style={{ fontWeight: 600, color: 'var(--foreground)', margin: 0 }}>
+                    If we fall short of our SQL target, we keep running at no extra cost until every meeting is delivered. Your 90 days don't end until the number is met.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
