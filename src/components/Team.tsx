@@ -587,7 +587,7 @@ const LeadershipCard: React.FC<LeadershipCardProps> = ({ leader, onClick }) => {
       style={{
         background: '#ffffff',
         border: '1.5px solid var(--border)',
-        borderRadius: '24px',
+        borderRadius: '40px',
         padding: '1.5rem',
         display: 'flex',
         flexDirection: 'column',
@@ -596,7 +596,8 @@ const LeadershipCard: React.FC<LeadershipCardProps> = ({ leader, onClick }) => {
         width: '340px',
         maxWidth: '100%',
         boxShadow: '0 12px 30px -12px rgba(15, 23, 42, 0.06)',
-        transition: 'border-color 0.3s ease'
+        transition: 'border-color 0.3s ease',
+        overflow: 'hidden'
       }}
       className="leadership-card"
     >
@@ -689,7 +690,7 @@ const LeadershipCard: React.FC<LeadershipCardProps> = ({ leader, onClick }) => {
               {/* Quote */}
               <div style={{ 
                 background: 'var(--bg-soft)',
-                borderRadius: '12px',
+                borderRadius: '16px',
                 padding: '0.75rem 1rem',
                 marginTop: '8px',
                 width: '100%',
@@ -743,18 +744,29 @@ const DepartmentCard: React.FC<DepartmentCardProps> = ({ dept }) => {
       style={{
         background: '#ffffff',
         border: '1.5px solid var(--border)',
-        borderTop: `4px solid ${dept.accentColor}`,
-        borderRadius: '28px',
+        borderRadius: '40px',
         padding: '2.5rem',
         display: 'flex',
         flexDirection: 'column',
         height: '100%',
         cursor: 'default',
         boxShadow: '0 12px 35px -12px rgba(15, 23, 42, 0.05)',
-        transition: 'border-color 0.3s ease'
+        transition: 'border-color 0.3s ease',
+        position: 'relative',
+        overflow: 'hidden'
       }}
       className="dept-card"
     >
+      {/* Top Accent Line (Perfect Rounded Clipping) */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        height: '4px',
+        background: dept.accentColor
+      }} />
+
       {/* Department Pill */}
       <div style={{
         alignSelf: 'flex-start',
