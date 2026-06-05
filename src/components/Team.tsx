@@ -508,7 +508,7 @@ const Team = () => {
                 <div style={{
                   background: 'var(--bg-soft)',
                   borderLeft: '4px solid var(--primary)',
-                  borderRadius: '0 16px 16px 0',
+                  borderRadius: '16px',
                   padding: '1.5rem 2rem',
                   width: '100%',
                   textAlign: 'left'
@@ -677,19 +677,26 @@ const LeadershipCard: React.FC<LeadershipCardProps> = ({ leader, onClick }) => {
               </p>
 
               {/* Quote */}
-              <p style={{ 
-                fontSize: '0.85rem', 
-                color: 'var(--foreground)', 
-                fontStyle: 'italic', 
-                fontWeight: 600,
-                lineHeight: 1.4,
-                margin: '6px 0 0 0',
-                paddingLeft: '12px',
-                borderLeft: '2px solid var(--primary)',
-                opacity: 0.95
+              <div style={{ 
+                background: 'var(--bg-soft)',
+                borderLeft: '3px solid var(--primary)',
+                borderRadius: '12px',
+                padding: '0.75rem 1rem',
+                marginTop: '8px',
+                width: '100%'
               }}>
-                "{leader.quote}"
-              </p>
+                <p style={{ 
+                  fontSize: '0.85rem', 
+                  color: 'var(--foreground)', 
+                  fontStyle: 'italic', 
+                  fontWeight: 600,
+                  lineHeight: 1.4,
+                  margin: 0,
+                  opacity: 0.95
+                }}>
+                  "{leader.quote}"
+                </p>
+              </div>
             </motion.div>
           </motion.div>
         )}
