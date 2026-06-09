@@ -41,6 +41,25 @@ const Hero = () => {
 
       if (response.ok) {
         setStatus('success');
+
+        // Trigger Meta Conversions API (server-side Lead tracking)
+        try {
+          fetch('/api/meta-conversions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              email: formData.email,
+              phone: formData.whatsapp,
+              fullName: formData.fullName,
+              eventName: 'Lead',
+              eventSourceUrl: window.location.href,
+            }),
+          });
+        } catch (fbError) {
+          console.error('Failed to trigger Conversions API:', fbError);
+        }
       } else {
         setStatus('error');
       }
