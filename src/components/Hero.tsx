@@ -131,6 +131,7 @@ const Hero = () => {
             {/* Headline */}
             <motion.h1 
               variants={itemVariants}
+              className="desktop-only"
               style={{ 
                 fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', 
                 fontWeight: 900, 
@@ -144,6 +145,22 @@ const Hero = () => {
               If They Come Back, You Built <span style={{ color: 'var(--primary)' }}>Trust.</span> <br />
               If They Tell Others, You Built a <span style={{ color: 'var(--primary)' }}>Brand.</span>
             </motion.h1>
+
+            <motion.h1 
+              variants={itemVariants}
+              className="mobile-only"
+              style={{ 
+                fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', 
+                fontWeight: 900, 
+                color: 'var(--foreground)', 
+                marginBottom: '2rem',
+                lineHeight: 1.1,
+                letterSpacing: '-0.04em'
+              }}
+            >
+              Let’s Discuss our <span style={{ color: 'var(--primary)' }}>Proven 90 Days</span> Marketing System
+            </motion.h1>
+
 
             <motion.p 
               variants={itemVariants}

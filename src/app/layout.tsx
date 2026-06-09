@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 import CustomCursor from "@/components/CustomCursor";
 import ClarityTracker from "@/components/ClarityTracker";
+import MetaPixel from "@/components/MetaPixel";
 
 export default function RootLayout({
   children,
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <MetaPixel />
         <ClarityTracker />
         <CustomCursor />
         {children}
@@ -27,3 +29,4 @@ export default function RootLayout({
     </html>
   );
 }
+

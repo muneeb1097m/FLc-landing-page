@@ -412,3 +412,17 @@ p {
   color: white !important;
   transform: scale(1.1);
 }
+
+.mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: block !important;
+  }
+}
+
