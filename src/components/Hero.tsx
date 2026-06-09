@@ -150,16 +150,20 @@ const Hero = () => {
               variants={itemVariants}
               className="mobile-only"
               style={{ 
-                fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', 
+                fontSize: 'clamp(2.0rem, 6vw, 2.8rem)', 
                 fontWeight: 900, 
                 color: 'var(--foreground)', 
                 marginBottom: '2rem',
-                lineHeight: 1.1,
-                letterSpacing: '-0.04em'
+                lineHeight: 1.2,
+                letterSpacing: '-0.04em',
+                display: 'block'
               }}
             >
-              Let’s Discuss our <span style={{ color: 'var(--primary)' }}>Proven 90 Days</span> Marketing System
+              Let’s Discuss our <br />
+              <span style={{ color: 'var(--primary)', display: 'inline' }}>Proven 90 Days</span> <br />
+              Marketing System
             </motion.h1>
+
 
 
             <motion.p 
